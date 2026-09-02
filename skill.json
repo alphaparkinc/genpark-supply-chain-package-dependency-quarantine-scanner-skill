@@ -1,0 +1,39 @@
+{
+  "name": "genpark-supply-chain-package-dependency-quarantine-scanner-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Agentic software supply-chain malicious package dependency quarantine scanner and SBOM vulnerability auditor.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "appsec",
+  "tags": [
+    "supply-chain-security",
+    "snyk-style",
+    "socket-dev",
+    "sbom-audit",
+    "malware-scanner"
+  ],
+  "inputs": {
+    "package_manifest_text": {
+      "type": "string"
+    },
+    "ecosystem_target": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "sbom_scan_id": {
+      "type": "string"
+    },
+    "vulnerabilities_discovered_count": {
+      "type": "integer"
+    },
+    "quarantine_status_verdict": {
+      "type": "string"
+    },
+    "sbom_dependency_attestation_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
